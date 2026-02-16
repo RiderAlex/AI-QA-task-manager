@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="authSection">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter username">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="appSection" class="hidden">
+        <header>
+            <h1>Task Manager</h1>
+            <button onclick="toggleTheme()">Toggle Theme</button>
+            <button onclick="logout()">Logout</button>
+        </header>
+
+        <section class="dashboard">
+            <p>Total Tasks: <span id="totalTasks">0</span></p>
+            <p>Completed Tasks: <span id="completedTasks">0</span></p>
+        </section>
+
+        <section class="taskInput">
+            <input type="text" id="taskInput" placeholder="New task">
+            <button onclick="addTask()">Add Task</button>
+        </section>
+
+        <section class="filters">
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('completed')">Completed</button>
+            <button onclick="filterTasks('pending')">Pending</button>
+        </section>
+
+        <ul id="taskList"></ul>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
