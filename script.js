@@ -91,11 +91,3 @@ function updateDashboard() {
 function toggleTheme() {
     document.body.classList.toggle("dark");
 }
-import { datadogLogs } from '@datadog/browser-logs';
-
-datadogLogs.init({
-    clientToken: 'pub4dc5d836dac2063bedb50be0f5a47170',
-    site: 'datadoghq.eu',
-    forwardErrorsToLogs: true,
-    sessionSampleRate: 100
-});
